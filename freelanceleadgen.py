@@ -1,12 +1,10 @@
 import requests
-
+search_query = input('Enter a business type: ')
 def getResults(next_page_token=''):
 
     api_key = "AIzaSyD8qjSOAp3tv7Hj9lTVsq2fBW6RjVzhpaE"
-
-    search_query = "hvac"
     location = "39.8592,-75.0144" 
-    radius = 500 
+    radius = 200 
 
     if next_page_token:
         url = f"https://maps.googleapis.com/maps/api/place/textsearch/json?query={search_query}&pagetoken={next_page_token}&key={api_key}"
